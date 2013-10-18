@@ -1,0 +1,36 @@
+<%@ page import="com.widaz.canchas.Arriendo" %>
+
+
+
+<div class="fieldcontain ${hasErrors(bean: arriendoInstance, field: 'cancha', 'error')} required">
+	<label for="cancha">
+		<g:message code="arriendo.cancha.label" default="Cancha" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:select id="cancha" name="cancha.id" from="${com.widaz.canchas.Cancha.list()}" optionKey="id" required="" value="${arriendoInstance?.cancha?.id}" class="many-to-one"/>
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: arriendoInstance, field: 'horaDesde', 'error')} required">
+	<label for="horaDesde">
+		<g:message code="arriendo.horaDesde.label" default="Hora Desde" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:datePicker name="horaDesde" precision="minute"  value="${arriendoInstance?.horaDesde}"  />
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: arriendoInstance, field: 'horaHasta', 'error')} required">
+	<label for="horaHasta">
+		<g:message code="arriendo.horaHasta.label" default="Hora Hasta" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:datePicker name="horaHasta" precision="minutes"  value="${arriendoInstance?.horaHasta}"  />
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: arriendoInstance, field: 'nombreCliente', 'error')} ">
+	<label for="nombreCliente">
+		<g:message code="arriendo.nombreCliente.label" default="Nombre Cliente" />
+		
+	</label>
+	<g:textField name="nombreCliente" value="${arriendoInstance?.nombreCliente}"/>
+</div>
+
