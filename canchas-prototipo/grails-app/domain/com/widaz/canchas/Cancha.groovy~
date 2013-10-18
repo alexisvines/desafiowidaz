@@ -1,0 +1,7 @@
+package com.widaz.canchas
+
+class Cancha {
+
+    static constraints = {
+    }
+}

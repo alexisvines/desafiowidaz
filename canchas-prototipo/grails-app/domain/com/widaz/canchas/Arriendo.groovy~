@@ -1,0 +1,7 @@
+package com.widaz.canchas
+
+class Arriendo {
+
+    static constraints = {
+    }
+}
