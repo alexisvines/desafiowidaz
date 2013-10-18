@@ -1,7 +1,0 @@
-package com.widaz.canchas
-
-class ComplejoDeportivo {
-
-    static constraints = {
-    }
-}
