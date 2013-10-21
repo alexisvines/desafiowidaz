@@ -87,11 +87,7 @@
 			<ul>
 				<li>App version: <g:meta name="app.version"/></li>
 				<li>Grails version: <g:meta name="app.grails.version"/></li>
-<<<<<<< HEAD
 				<li>Groovy version: ${GroovySystem.getVersion()}</li>
-=======
-			 <!-- 	<li>Groovy version: ${org.codehaus.groovy.runtime.InvokerHelper.getVersion()}</li> -->
->>>>>>> 67e6007424d7c99dd020e086d71113a77b63f41e
 				<li>JVM version: ${System.getProperty('java.version')}</li>
 				<li>Reloading active: ${grails.util.Environment.reloadingAgentEnabled}</li>
 				<li>Controllers: ${grailsApplication.controllerClasses.size()}</li>
