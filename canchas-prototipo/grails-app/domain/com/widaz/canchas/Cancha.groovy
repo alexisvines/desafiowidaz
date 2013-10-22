@@ -8,4 +8,8 @@ class Cancha {
 
     static constraints = {
     }
+	
+	String toString(){
+	 	return numeroCancha.toString()
+	}
 }

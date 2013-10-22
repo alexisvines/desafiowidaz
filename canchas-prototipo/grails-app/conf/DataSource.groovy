@@ -13,8 +13,15 @@ hibernate {
 environments {
     development {
         dataSource {
-            dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
-            url = "jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000"
+            //dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
+            //url = "jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000"
+
+		dbCreate = "update"
+		url = "jdbc:mysql://localhost:3306/canchas"
+		driverClassName = "com.mysql.jdbc.Driver"
+		username = "root"
+		password = "282983"
+
         }
     }
     test {
@@ -25,7 +32,14 @@ environments {
     }
     production {
         dataSource {
-            dbCreate = "update"
+
+	    jndiName="java:comp/env/jdbc/canchasdb"
+	    dbCreate= "update"
+	    //dialect = org.hibernate.dialect.MySQL5InnoDBDialect
+	    
+           
+
+	   /* dbCreate = "update"
             url = "jdbc:h2:prodDb;MVCC=TRUE;LOCK_TIMEOUT=10000"
             pooled = true
             properties {
@@ -38,6 +52,7 @@ environments {
                testOnReturn=true
                validationQuery="SELECT 1"
             }
+	*/
         }
     }
 }

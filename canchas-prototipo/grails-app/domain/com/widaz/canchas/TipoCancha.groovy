@@ -1,9 +1,13 @@
 package com.widaz.canchas
 
 class TipoCancha {
-
-	String nombre
 	
+	String nombre
+
+
+
     static constraints = {
     }
+
+	String toString(){ return nombre}
 }

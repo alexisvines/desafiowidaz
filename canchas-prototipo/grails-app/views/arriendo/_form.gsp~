@@ -23,7 +23,7 @@
 		<g:message code="arriendo.horaHasta.label" default="Hora Hasta" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:datePicker name="horaHasta" precision="minutes"  value="${arriendoInstance?.horaHasta}"  />
+	<g:datePicker name="horaHasta" precision="day"  value="${arriendoInstance?.horaHasta}"  />
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: arriendoInstance, field: 'nombreCliente', 'error')} ">
